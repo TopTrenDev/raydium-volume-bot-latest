@@ -31,16 +31,20 @@ RPC_ENDPOINT=                # RPC endpoint for Solana
 RPC_WEBSOCKET_ENDPOINT=      # RPC WebSocket endpoint for Solana
 
 ####### BUY SETTING #######
-BUY_UPPER_PERCENT=60         # Higher percent limit of SOL that can be used to buy token in wallet
+DISTRIBUTE_INTERVAL_MAX=50
+DISTRIBUTE_INTERVAL_MIN=30
+
+BUY_UPPER_PERCENT=50         # Higher percent limit of SOL that can be used to buy token in wallet
 BUY_LOWER_PERCENT=30         # Lower percent limit of SOL (30 means, it buys with larger than 30% of SOL in wallet when buy)
 
-BUY_INTERVAL_MAX=30          # Upper limit of seconds to wait after second buy
-BUY_INTERVAL_MIN=2           # Lower limit of seconds (it waits from 2 to 30 secs after second buy before second buy)
+BUY_INTERVAL_MAX=10          # Upper limit of seconds to wait after second buy
+BUY_INTERVAL_MIN=0           # Lower limit of seconds (it waits from 2 to 30 secs after second buy before second buy)
 
-SELL_INTERVAL_MAX=30         # Upper limit of seconds to wait after sell
-SELL_INTERVAL_MIN=3          # Lower limit of seconds (it waits from 2 to 30 secs after sell to transfer SOL)
+SELL_INTERVAL_MAX=10         # Upper limit of seconds to wait after sell
+SELL_INTERVAL_MIN=0          # Lower limit of seconds (it waits from 2 to 30 secs after sell to transfer SOL)
 
-DISTRIBUTE_WALLET_NUM=4      # Number of wallets that run in parallel which makes volume (max: 20)
+DISTRIBUTE_WALLET_NUM=2      # Number of wallets that run in parallel which makes volume (max: 20)
+SOL_AMOUNT_TO_DISTRIBUTE=0.001
 
 SLIPPAGE=50                  # Slippage in percent
 
@@ -49,7 +53,7 @@ JITO_MODE=false
 JITO_FEE=0.0001
 ```
 
-#  🚀 Usage
+## Usage
 ### 1. Clone the repository
 ```
 git clone https://github.com/TopTrenDev/raydium-volume-bot-v2.git
