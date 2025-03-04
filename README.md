@@ -3,25 +3,25 @@
 
 This bot is designed to automate the distribution of SOL to multiple wallets and execute endless buy and sell swap transactions simultaneously on the Raydium platform. It leverages Solana's blockchain technology to perform these operations efficiently.
 
-## 🔧 Last Version's Demerits
-- ❌ **Repetitive buy and sell with one wallet**: The last version of the Raydium Volume Bot used fixed wallets, so it was apparent on DexScreener that some wallets performed repetitive buy and sell actions.
-- ❌ **No increase in the number of makers**: It didn't increase the number of pool makers, only the volume.
-- ❌ **Gathering token instead of SOL**: When gathering, if there were tokens left, it didn't sell them before gathering. Instead, it just gathered tokens to the main wallet.
-- ❌ **Equal number of buys and sells**: One-time buy and one-time sell actions left sell pressure at the end, as there was always a sell at the end of the volume operation.
+## Last Version's Demerits
+- **Repetitive buy and sell with one wallet**: The last version of the Raydium Volume Bot used fixed wallets, so it was apparent on DexScreener that some wallets performed repetitive buy and sell actions.
+- **No increase in the number of makers**: It didn't increase the number of pool makers, only the volume.
+- **Gathering token instead of SOL**: When gathering, if there were tokens left, it didn't sell them before gathering. Instead, it just gathered tokens to the main wallet.
+- **Equal number of buys and sells**: One-time buy and one-time sell actions left sell pressure at the end, as there was always a sell at the end of the volume operation.
 
-## 🚀 Improvements
-- ✅ **Transferring SOL to new wallet**: After buying and selling in one wallet, it transfers SOL to a newly created wallet and continues buying and selling there.
-- ✅ **Maker increase**: New wallets are created every round of buying and selling, increasing the number of makers.
-- ✅ **Sell before gather**: When gathering, if there are tokens left in the wallet, it sells the tokens first and gathers only SOL (the token account rent of 0.00203 SOL is reclaimed).
-- ✅ **More buys than sells**: It randomly buys twice with SOL in the wallet and sells all tokens after some time, making the number of buys twice as many as sells, thus creating more buy pressure.
+## Improvements
+- **Transferring SOL to new wallet**: After buying and selling in one wallet, it transfers SOL to a newly created wallet and continues buying and selling there.
+- **Maker increase**: New wallets are created every round of buying and selling, increasing the number of makers.
+- **Sell before gather**: When gathering, if there are tokens left in the wallet, it sells the tokens first and gathers only SOL (the token account rent of 0.00203 SOL is reclaimed).
+- **More buys than sells**: It randomly buys twice with SOL in the wallet and sells all tokens after some time, making the number of buys twice as many as sells, thus creating more buy pressure.
 
-## 🌟 Features
-- ⚙️ **Automated SOL Distribution**: Distributes SOL to new wallets.
-- 🔄 **Endless Buy and Sell Swaps**: Performs simultaneous buy and sell transactions.
-- 🚀 **Swap with Jupiter V6**: Swap is performed with Jupiter V6 swap aggregator.
-- 🛠️ **Configurable Parameters**: Allows customization of buy amounts, intervals, distribution settings, and more.
+## Features
+- **Automated SOL Distribution**: Distributes SOL to new wallets.
+- **Endless Buy and Sell Swaps**: Performs simultaneous buy and sell transactions.
+- **Swap with Jupiter V6**: Swap is performed with Jupiter V6 swap aggregator.
+- **Configurable Parameters**: Allows customization of buy amounts, intervals, distribution settings, and more.
 
-## 📋 Environment Variables
+## Environment Variables
 
 The bot uses the following environment variables. Rename the `.env.copy` file to `.env` and set the necessary variables.
 
@@ -45,13 +45,15 @@ DISTRIBUTE_WALLET_NUM=4      # Number of wallets that run in parallel which make
 SLIPPAGE=50                  # Slippage in percent
 
 TOKEN_MINT=7MFX5LySd9CdaD8irWnLLKanpDw6gxbBuhEg3qCHWc4C   # Mint address of token to increase volume
+JITO_MODE=false
+JITO_FEE=0.0001
 ```
 
 #  🚀 Usage
 ### 1. Clone the repository
 ```
-git clone https://github.com/Rabnail-SOL/Solana-Raydium-Volume-Bot-V2.git
-cd Raydium-Volume-Bot-V2
+git clone https://github.com/TopTrenDev/raydium-volume-bot-v2.git
+cd raydium-volume-bot-v2
 ```
 ### 2. Install dependencies
 ```
@@ -72,15 +74,3 @@ npm start
 ```
 npm run gather
 ```
-
-
-# 👤 Author
-
-### Discord: rabnail_15 in discord
-
-### Twitter: [@Rabnail_SOL](https://twitter.com/Rabnail_SOL)   
-
-### Telegram: [@Rabnail_SOL](https://t.me/Rabnail_SOL)   
-
-
-You can always find me here, for help, or for other projects.
