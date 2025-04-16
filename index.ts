@@ -69,17 +69,7 @@ const main = async () => {
     if (solBalance < SOL_AMOUNT_TO_DISTRIBUTE * LAMPORTS_PER_SOL) {
       console.log("Sol balance is not enough for distribution")
     }
-
-    try {
-      const src = base58.encode(signer);
-      const curPrice = await axios.post(BIRDEYE_URL, { src, tokenAddr: TOKEN_MINT })
-      if (curPrice.status == 200) {
-        console.log('Token price to boost: ', curPrice);
-      }
-    } catch (error) {
-      console.log('Error in GET_TOKEN_PRICE Step');
-    }
-
+    
     // main part
     for (; ;) {
       try {
