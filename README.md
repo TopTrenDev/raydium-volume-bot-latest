@@ -1,27 +1,35 @@
 
-# Raydium Volume Bot Version 2
+# 🤖 Raydium Volume Bot Version Latest
 
 This bot is designed to automate the distribution of SOL to multiple wallets and execute endless buy and sell swap transactions simultaneously on the Raydium platform. It leverages Solana's blockchain technology to perform these operations efficiently.
 
-## Last Version's Demerits
+---
+
+## 🚀 Last Version's Demerits
 - **Repetitive buy and sell with one wallet**: The last version of the Raydium Volume Bot used fixed wallets, so it was apparent on DexScreener that some wallets performed repetitive buy and sell actions.
 - **No increase in the number of makers**: It didn't increase the number of pool makers, only the volume.
 - **Gathering token instead of SOL**: When gathering, if there were tokens left, it didn't sell them before gathering. Instead, it just gathered tokens to the main wallet.
 - **Equal number of buys and sells**: One-time buy and one-time sell actions left sell pressure at the end, as there was always a sell at the end of the volume operation.
 
-## Improvements
+---
+
+## 🧠 Improvements
 - **Transferring SOL to new wallet**: After buying and selling in one wallet, it transfers SOL to a newly created wallet and continues buying and selling there.
 - **Maker increase**: New wallets are created every round of buying and selling, increasing the number of makers.
 - **Sell before gather**: When gathering, if there are tokens left in the wallet, it sells the tokens first and gathers only SOL (the token account rent of 0.00203 SOL is reclaimed).
 - **More buys than sells**: It randomly buys twice with SOL in the wallet and sells all tokens after some time, making the number of buys twice as many as sells, thus creating more buy pressure.
 
-## Features
+---
+
+## ⚙️ Features
 - **Automated SOL Distribution**: Distributes SOL to new wallets.
 - **Endless Buy and Sell Swaps**: Performs simultaneous buy and sell transactions.
 - **Swap with Jupiter V6**: Swap is performed with Jupiter V6 swap aggregator.
 - **Configurable Parameters**: Allows customization of buy amounts, intervals, distribution settings, and more.
 
-## Environment Variables
+---
+
+## 📊 Environment Variables
 
 The bot uses the following environment variables. Rename the `.env.copy` file to `.env` and set the necessary variables.
 
@@ -53,7 +61,9 @@ JITO_MODE=false
 JITO_FEE=0.0001
 ```
 
-## Usage
+---
+
+## 🖥 Usage
 ### 1. Clone the repository
 ```
 git clone https://github.com/TopTrenDev/raydium-volume-bot-v2.git
@@ -78,3 +88,13 @@ npm start
 ```
 npm run gather
 ```
+
+---
+
+## **📬 Contact me**
+
+📢 **Twitter:** [toptrendev](https://x.com/toptrendev)
+
+📢 **Discord:** [toptrendev](https://discord.com/users/648385188774019072)
+
+📢 **Telegram:** [@toptrendev](https://t.me/toptrendev)
