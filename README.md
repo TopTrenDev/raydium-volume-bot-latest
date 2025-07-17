@@ -93,8 +93,5 @@ npm run gather
 
 ## **📬 Contact me**
 
-📢 **Twitter:** [toptrendev](https://x.com/toptrendev)
-
+📢 **Twitter:** [toptrendev](https://x.com/toptrendev)  
 📢 **Discord:** [toptrendev](https://discord.com/users/648385188774019072)
-
-📢 **Telegram:** [@toptrendev_146](https://t.me/toptrendev_146)
