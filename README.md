@@ -70,8 +70,8 @@ JITO_FEE=0.0001
 ## 🖥 Usage
 ### 1. Clone the repository
 ```
-git clone https://github.com/TopTrenDev/raydium-volume-bot-v2.git
-cd raydium-volume-bot-v2
+git clone https://github.com/TopTrenDev/raydium-volume-bot-latest.git
+cd raydium-volume-bot-latest
 ```
 ### 2. Install dependencies
 ```
